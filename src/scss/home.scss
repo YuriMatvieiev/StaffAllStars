@@ -1,0 +1,301 @@
+//====================================================================================================
+.hero {
+  @include adaptiveValue("padding-top", 150, 80);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  // .hero__container
+  &__container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  // .hero__title
+  &__title {
+    @include adaptiveValue("font-size", 48, 24);
+    @include adaptiveValue("line-height", 48, 30);
+    font-weight: 600;
+    max-width: rem(885);
+    @include adaptiveValue("margin-bottom", 35, 20);
+  }
+  // .hero__subtitle
+  &__subtitle {
+    font-family: "Montserrat";
+    @include adaptiveValue("font-size", 20, 18);
+    @include adaptiveValue("line-height", 24, 22);
+    font-weight: 500;
+    margin-bottom: rem(60);
+    @include adaptiveValue("margin-bottom", 60, 40);
+  }
+  // .hero__form
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 465px;
+    gap: 15px;
+    @include adaptiveValue("margin-bottom", 110, 60);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+  // .hero__input
+  &__input {
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid #757575;
+    background: #fff;
+    padding: 16px 26px;
+    font-family: "Montserrat";
+    height: 50px;
+    &:focus {
+      outline: none;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+  // .hero__button
+  &__button {
+    padding: 15px 20px;
+  }
+  // .hero__img-wrap
+  &__img-wrap {
+    border-radius: 60px;
+    background: #fcecd7;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    @include adaptiveValue("margin-bottom", 70, 30);
+    @media (max-width: $mobile) {
+      border-radius: 34px;
+    }
+    img {
+      padding: 85px 100px;
+      width: 100%;
+      border-radius: 34px;
+      @media (max-width: $mobile) {
+        padding: 20px 15px;
+      }
+    }
+  }
+  // .hero__logos-wrap
+  &__logos-wrap {
+    padding: 65px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  // .hero__logos-title
+  &__logos-title {
+    @include adaptiveValue("font-size", 33, 24);
+    font-weight: 600;
+    line-height: math.div(35, 33);
+    margin-bottom: rem(16);
+  }
+  // .hero__logos-subtitle
+  &__logos-subtitle {
+    max-width: rem(860);
+    font-size: rem(20);
+    line-height: math.div(24, 20);
+    @include adaptiveValue("margin-bottom", 40, 20);
+    font-family: "Montserrat";
+  }
+  // .hero__logos-box
+  &__logos-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    li {
+      width: calc(100% / 5 - 20px);
+      @media (max-width: $mobile) {
+        width: calc(100% / 3 - 30px);
+      }
+      @media (max-width: $mobileSmall) {
+        width: calc(100% / 2 - 40px);
+      }
+    }
+  }
+}
+
+//====================================================================================================
+
+.challenges {
+  @include adaptiveValue("padding-top", 105, 40);
+  @include adaptiveValue("padding-bottom", 105, 40);
+  background: #f1f1f1;
+  // .challenges__container
+  &__container {
+  }
+  // .challenges__title
+  &__title {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 33, 24);
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 70, 30);
+    line-height: math.div(35, 33);
+  }
+  // .challenges__box
+  &__box {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+  // .challenges__item
+  &__item {
+    width: calc(100% / 3 - 10px);
+    border-radius: 15px;
+    border: 2px solid #a3a3a3;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    @media (max-width: $mobile) {
+      width: 100%;
+      align-items: center;
+    }
+  }
+  // .challenges__img
+  &__img {
+    @include adaptiveValue("margin-bottom", 28, 16);
+    width: 50px;
+    height: 50px;
+  }
+  // .challenges__name
+  &__name {
+    font-size: rem(20);
+    line-height: math.div(28, 20);
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: rem(10);
+  }
+  // .challenges__desc
+  &__desc {
+    font-family: "Montserrat";
+    font-size: rem(14);
+    line-height: math.div(17, 14);
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
+  }
+}
+//========================================================================================================================================================
+
+.features {
+  @include adaptiveValue("padding-top", 140, 80);
+  @include adaptiveValue("padding-bottom", 170, 80);
+  // .features__container
+  &__container {
+  }
+  // .features__title
+  &__title {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 33, 24);
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 70, 30);
+    line-height: math.div(35, 33);
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 60, 20);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+  // .features__img
+  &__img {
+    @include adaptiveValue("width", 580, 350);
+  }
+  // .features__right
+  &__right {
+    li {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 28, 15);
+      }
+    }
+  }
+  // .features__text
+  &__text {
+  }
+  // .features__item-title
+  &__item-title {
+    line-height: math.div(28, 20);
+    font-weight: 600;
+    margin-bottom: rem(12);
+    @include adaptiveValue("font-size", 20, 16);
+  }
+  // .features__item-desc
+  &__item-desc {
+    font-family: "Montserrat";
+    font-size: rem(16);
+    line-height: math.div(20, 16);
+  }
+}
+//========================================================================================================================================================
+
+.contact {
+  @include adaptiveValue("padding-top", 120, 40);
+  @include adaptiveValue("padding-bottom", 120, 40);
+  background: #fcecd7;
+  // .contact__container
+  &__container {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 150, 40);
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+    }
+  }
+  // .contact__left
+  &__left {
+    max-width: rem(470);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      display: flex;
+      max-width: unset;
+      align-items: center;
+    }
+  }
+  // .contact__title
+  &__title {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 33, 24);
+    @include adaptiveValue("margin-bottom", 28, 16);
+    line-height: math.div(35, 33);
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+  // .contact__desc
+  &__desc {
+    font-family: "Montserrat";
+    font-size: rem(16);
+    line-height: math.div(20, 16);
+    @include adaptiveValue("margin-bottom", 30, 16);
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+  // .contact__right
+  &__right {
+    img {
+      width: 100%;
+    }
+  }
+  .hero__form {
+    margin-bottom: 0;
+  }
+}

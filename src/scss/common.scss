@@ -1,0 +1,17 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.black-button {
+  background-color: $mainColor;
+  border-radius: 4px;
+  font-family: "Montserrat";
+  font-size: rem(16);
+  line-height: math.div(20, 16);
+  color: #fff;
+  height: 100%;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #f1a239;
+      color: $mainColor;
+      transition: all 0.3s ease 0s;
+    }
+  }
+}
